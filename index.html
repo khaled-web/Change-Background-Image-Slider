@@ -4,15 +4,14 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>The Background Images Slider || Home</title>
+ <title>Calculator</title>
  
  <!-- favicon -->
- <link rel="shortcut icon" href="./css/favicon.ico" type="image/x-icon" />
+ <link rel="shortcut icon" href="./css/favicon01.ico" type="image/x-icon" />
  <!-- end of favicon -->
 
  <!-- font-awesome -->
  <link rel="stylesheet" href="./css/fontawesome-free-5.12.1-web/css/all.min.css">
- <!-- end of font-awesome -->
 
  <!-- Css-style-Link -->
 <link rel="stylesheet" href="./css/style.css">
@@ -24,14 +23,91 @@
 
 </head>
 <body>
-<div class="images">
-  <button type="button" class="btn prevBtn">
-    prevBtn
-  </button>
-  <button type="button" class="btn nextBtn">
-    nextBtn 
-  </button>
-</div>
+
+  <section class="calculator">
+    <form>
+      <input type="text" class="screen">
+    </form>
+
+    <div class="buttons">
+      <!-- yellow-buttons -->
+      <button type="button" class="btn btn-yellow" data-num="*">
+        *
+      </button>
+
+      <button type="button" class="btn btn-yellow" data-num="/">
+        /
+      </button>
+
+      <button type="button" class="btn btn-yellow" data-num="-">
+        -
+      </button>
+
+      <button type="button" class="btn btn-yellow" data-num="+">
+        +
+      </button>
+      <!-- end of yellow-buttons -->
+
+      <!-- grey-buttons -->
+      <button type="button" class="btn btn-grey" data-num=".">
+        .
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="9">
+        9
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="8">
+        8
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="7">
+        7
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="6">
+        6
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="5">
+        5
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="4">
+        4
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="3">
+        3
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="2">
+        2
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="1">
+        1
+      </button>
+
+      <button type="button" class="btn btn-grey" data-num="0">
+        0
+      </button>
+      <!-- end of grey-buttons -->
+
+      <!-- equal-buttons -->
+      <button type="button"  class="btn-equal btn-grey">
+        =
+      </button>
+      <!-- end of equal-buttons -->
+
+      <!-- clear-buttons -->
+      <button type="button"  class="btn-clear btn-grey">
+        C
+      </button>
+      <!-- end of clear-buttons -->
+    </div>
+
+  </section>
 
 <!-- JS-Link -->
 <script src="./js/index.js"></script>

@@ -1,41 +1,24 @@
-const prevBtn = document.querySelector('.prevBtn');
-const nextBtn = document.querySelector('.nextBtn');
-const container = document.querySelector('.images');
+const btn = document.querySelectorAll('.btn')
+const screen = document.querySelector('.screen');
+const equalBtn = document.querySelector('.btn-equal');
+const clearBtn = document.querySelector('.btn-clear');
 
-let counter = 0;
-
-nextBtn.addEventListener('click', () => {
- container.animate([{
-  opacity: '0.1'
- }, {
-  opacity: '1.0'
- }], {
-  duration: 1000,
-  fill: 'forwards'
+for (let i = 0; i < btn.length; i++) {
+ btn[i].addEventListener('click', () => {
+  let number = btn[i].getAttribute('data-num');
+  screen.value += number;
  });
+}
 
- if (counter === 4) {
-  counter = -1;
+equalBtn.addEventListener('click', () => {
+ if (screen.value === '') {
+  swal("Oops!", "Double Check Your input.", "error");
+ } else {
+  let value = eval(screen.value);
+  screen.value = value;
  }
-
- counter++;
- container.style.backgroundImage = `url(../img/bcg-${counter}.jpeg)`;
-
 });
 
-prevBtn.addEventListener('click', () => {
- container.animate([{
-  opacity: '0.1'
- }, {
-  opacity: '1.0'
- }], {
-  duration: 1000,
-  fill: 'forwards'
- });
-
- if (counter === 0) {
-  counter = 5;
- }
- counter--;
- container.style.backgroundImage = `url(../img/bcg-${counter}.jpeg)`
+clearBtn.addEventListener('click', () => {
+ screen.value = '';
 })
